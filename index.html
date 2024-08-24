@@ -5,51 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Reservation System</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style2.css">
 </head>
 
 <body>
     <div class="grid-container">
-            <header class="header">
-                <div class="container_tittle">
-                    <h1 id="tittle">Hotel Reservation System</h1>
-                </div>
-            </header>
-            
-            <section class="main">
-                <div class="search_container">
-                    <form id="form-search">
-                        <label for="type_of_customer">Tipe of Customer:</label>
-                        <select id="type_of_customer" class="buttons_group_search">
+        <!-- Header -->
+        <header class="header">
+            <div class="container-title">
+                <h1 id="title">Hotel Reservation System</h1>
+            </div>
+        </header>
+
+        <!-- Main Section -->
+        <main class="main">
+            <!-- Search Form -->
+            <section class="search-container">
+                    <form id="form_section_1" class="form_section">
+                        <label for="type-of-customer">Type of Customer:</label>
+                        <select id="type-of-customer" class="buttons-group-search">
                             <option value="regular">Regular</option>
-                            <option value="recompensas">Recompensas</option>
+                            <option value="rewards">Rewards</option>
                         </select>
-                    
-                        <label for="dates">Reservation Dates:</label>
-                        <input type="date" class="buttons_group_search" id="dates" name="dates" multiple>
-                    
-                        <button type="button" class="buttons_group_search" id="add-date">+</button>
                     </form>
-                </div>
-                <div class="search_button_container">
-                    <button type="submit" class="search_button">Find Cheapest Hotel</button>
-                </div>
+                    
+                    <form id="form_section_2" class="form_section">
+                        <label for="dates">Reservation Dates:</label>
+                        <input type="date" class="buttons-group-search" id="dates" name="dates" multiple>
+                    
+                        <button type="button" class="buttons-group-search" id="add-date">+</button>
+                    </form>
+                    <div class="search-button-container">
+                        <button type="submit" class="buttons-group-search" id="search-button" >Explore</button>
+                    </div>
             </section>
-            
-            
-            <section class="list-hotel">
-                <div class="container_tittle_list">
-                    <h1 id="tittle_list">ALL HOTELS</h1>
-                </div>
-            
-                <div class="container_list_hotel">
-                    <div>Lakewood</div>
-                    <div>Bridgewood</div>
-                    <div>Ridgewood</div>
-                </div>
-            
-            </section>
-            
+        </main>
+        <!-- Hotel List -->
+        <footer class="list-hotel">
+            <div class="container-title-list">
+                <h2 id="title-list">All Hotels</h2>
+            </div>
+        
+            <div class="container-list-hotel">
+                <section class="hotel-item">Lakewood</section>
+                <section class="hotel-item">Bridgewood</section>
+                <section class="hotel-item">Ridgewood</section>
+            </div>
+        </footer>
     </div>
 </body>
 
