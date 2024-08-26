@@ -2,57 +2,75 @@
 <html lang="en">
 
 <head>
+    <!-- Meta information about the document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Document title -->
     <title>Hotel Reservation System</title>
+
+    <!-- External CSS for date picker functionality -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Link to custom stylesheet -->
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <div class="grid-container">
-        <!-- Header -->
+        <!-- Header section containing the navigation and title -->
         <header class="header">
+            <nav id="nav-bar">
+                <!-- Navigation list of hotels -->
+                <ul class="container-list-hotel">
+                    <li class="hotel-item" id="hotel-Lakewood"><a href="#hotel-Lakewood-details">Lakewood</a></li>
+                    <li class="hotel-item" id="hotel-Bridgewood"><a href="#hotel-Bridgewood-details">Bridgewood</a></li>
+                    <li class="hotel-item" id="hotel-Ridgewood"><a href="#hotel-Ridgewood-details">Ridgewood</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main title of the page -->
             <div class="container-title">
                 <h1 id="title">Hotel Reservation System</h1>
             </div>
         </header>
 
-        <!-- Main Section -->
+        <!-- Main content section -->
         <main class="main">
-            <!-- Search Form -->
+
+            <!-- Container for displaying hotel details -->
+            <div id="hotel-details-container"></div>
+
+            <!-- Search form section -->
             <section class="search-container">
-                    <form id="form_section_1" class="form_section">
-                        <label for="type-of-customer">Type of Customer:</label>
-                        <select id="type-of-customer" class="buttons-group-search">
-                            <option value="regular">Regular</option>
-                            <option value="rewards">Rewards</option>
-                        </select>
-                    </form>
-                    
-                    <form id="form_section_2" class="form_section">
-                        <label for="dates">Reservation Dates:</label>
-                        <input type="date" class="buttons-group-search" id="dates" name="dates" multiple>
-                    
-                        <button type="button" class="buttons-group-search" id="add-date">+</button>
-                    </form>
-                    <div class="search-button-container">
-                        <button type="submit" class="buttons-group-search" id="search-button" >Explore</button>
+                <!-- Form for selecting customer type -->
+                <form id="form_section_1" class="form_section">
+                    <div class="reward-customer">
+                        <input type="checkbox" id="reward-customer">
+                        <label for="reward-customer">Reward Customer</label>
                     </div>
+                </form>
+
+                <!-- Form for selecting reservation dates -->
+                <form id="form_section_2" class="form_section">
+                    <label for="date-range">Reservation Dates:</label>
+                    <input type="date" class="buttons-group-search" id="date-range" name="dates" multiple>
+                </form>
+
+                <!-- Button to submit the search form -->
+                <div class="search-button-container">
+                    <button type="submit" class="buttons-group-search" id="search-button">Explore</button>
+                </div>
             </section>
+
+            <!-- Section for displaying search results -->
+            <section id="search-results" class="container-list-hotel"></section>
         </main>
-        <!-- Hotel List -->
-        <footer class="list-hotel">
-            <div class="container-title-list">
-                <h2 id="title-list">All Hotels</h2>
-            </div>
-        
-            <div class="container-list-hotel">
-                <section class="hotel-item">Lakewood</section>
-                <section class="hotel-item">Bridgewood</section>
-                <section class="hotel-item">Ridgewood</section>
-            </div>
-        </footer>
     </div>
+
+    <!-- Include external JavaScript libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/script.js"></script>
 </body>
 
 </html>
