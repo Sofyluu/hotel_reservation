@@ -45,6 +45,9 @@ function handleSearch() {
     const detailsContainer = document.getElementById('hotel-details-container');
     detailsContainer.innerHTML = '';
 
+    const titleContainer = document.getElementById('title');
+    titleContainer.innerHTML = 'Hotel Reservation System';
+
     const dateRange = document.getElementById('date-range').value;
     const isRewardCustomer = document.getElementById('reward-customer').checked;
 
@@ -126,6 +129,11 @@ document.querySelectorAll('.hotel-item a').forEach(link => {
 
 // Display detailed information for a selected hotel
 function displayHotelDetails(hotel) {
+
+    const titleContainer = document.getElementById('title');
+    titleContainer.innerHTML = '';
+
+
     const resultsContainer = document.getElementById('search-results');
     resultsContainer.innerHTML = '';
 
